@@ -1,0 +1,16 @@
+Perguntas:
+	- O que faz a linha "#include <stdio.h>"?
+	- O que faz a linha "int main()"?
+	- Qual o papel dos caracteres { e }?
+	- O que faz e o que é a palavra printf?
+	- Qual a função do elemento \n?
+
+Atividade: 
+	- Seguindo o exemplo anterior criar um programa que imprima na tela
+	o seu nome, endereco e telefone como segue abaixo:
+
+--------
+Nome
+Endereço
+Telefone
+--------

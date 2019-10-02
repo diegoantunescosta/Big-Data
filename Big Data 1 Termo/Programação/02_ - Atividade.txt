@@ -1,0 +1,14 @@
+Perguntas:
+	- O que fazem os caracteres //"?
+	- O que fazem os caracteres /* e */"?
+	- O que faz e o que é a palavra scanf?
+
+Atividade: 
+	- Seguindo o exemplo anterior criar um programa que solicite 
+	o seu nome, endereco e telefone e imprima na tela como segue abaixo:
+
+--------
+Nome
+Endereço
+Telefone
+--------

@@ -1,0 +1,6 @@
+Perguntas:
+	- O que faz a linha "return 0;"?
+	- O que faz a função scanf()?
+Atividade: 
+	- Seguindo o exemplo anterior criar um programa que solicite dois números e imprima na tela o dobro de cada valor.
+	- Seguindo o exemplo anterior criar um programa que solicite dois números e imprima na tela a soma do quadrado de cada valor.
