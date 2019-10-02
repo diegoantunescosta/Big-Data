@@ -1,5 +1,4 @@
-#teste
-#test123
+
 op = int (input ('Digite 1-Para pagamento a vista\n Digite 2- Para pagamento no crédito\n Qual a forma de pagamento:'))
 
 if op == 1:
