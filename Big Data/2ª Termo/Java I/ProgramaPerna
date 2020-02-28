@@ -1,0 +1,10 @@
+ant -f /home/diego/NetBeansProjects/ProgramaPerna -Dnb.internal.action.name=run run
+init:
+Deleting: /home/diego/NetBeansProjects/ProgramaPerna/build/built-jar.properties
+deps-jar:
+Updating property file: /home/diego/NetBeansProjects/ProgramaPerna/build/built-jar.properties
+compile:
+run:
+Quantas Pernas: 7
+Isso é um (a)ET
+BUILD SUCCESSFUL (total time: 2 seconds)
