@@ -2,7 +2,7 @@
  
 const char* ssid = "Diego_WIFI";
 const char* password = "diego1051";
-int LED = 2;
+int LED = 4;
 WiFiServer server(80);
  
 void setup() {
@@ -41,8 +41,9 @@ void loop() {
             client.println("HTTP/1.1 200 OK");
             client.println("Content-type:text/html");
             client.println();
-            client.print("Click <a href=\"/H\">here</a> to turn the LED on pin 2 on.<br>");
-            client.print("Click <a href=\"/L\">here</a> to turn the LED on pin 2 off.<br>");
+            client.print("<h1><center>INTERRUPTOR WIFI</center></h1><br>");
+            client.print(" <center><button><a href=\"/H\">APAGA</a></button></center><br>");
+            client.print(" <center><button><a href=\"/L\">ACENDE</a></button></center><br>");
             client.println();
             break;
           } else {
