@@ -8,7 +8,7 @@ int main()
     {
         printf("Digite seu estado: ");
         scanf("%s",sigla);
-
+        
         if(!strcmp(sigla, "rj"))
         {
             printf(" Voce é Carioca\n");
@@ -19,16 +19,16 @@ int main()
             {
                 printf("você é Paulista\n");
             }
-            else
-            {
+            else 
+            { 
                 if(!strcmp(sigla, "mg"))
                 {
                     printf("você é Mineiro\n");
                 }
-                else
+                else 
                 {
                     printf(" Você é de outro estado  !\n");
-                }
+                }  
             }
         }
         return 0;
