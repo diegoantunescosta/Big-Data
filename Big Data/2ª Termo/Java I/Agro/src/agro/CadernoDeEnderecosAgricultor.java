@@ -26,6 +26,10 @@ public class CadernoDeEnderecosAgricultor {
    this.endereco = endereco;
    
 }
+
+    CadernoDeEnderecosAgricultor() {
+        
+    }
  
     public String getNome(){
         return nome;
@@ -65,6 +69,10 @@ public class CadernoDeEnderecosAgricultor {
     
     public void setEndereco (String endereco) {
         this.endereco = endereco;
+    }
+    
+    public String getNomeTel(){
+        return getNome()+getTelefone();
     }
 } 
 
