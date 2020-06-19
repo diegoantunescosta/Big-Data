@@ -10,7 +10,7 @@ package lojaagricola;
  * @author diego
  */
 
-public class LojaAgricola extends Cliente   {
+public class LojaAgricola extends Cliente  {
 
     public String getNome() {
         return nome;
