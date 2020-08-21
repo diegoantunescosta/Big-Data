@@ -5,6 +5,9 @@
  */
 package javafxswingapplication;
 
+import javax.swing.JOptionPane;
+
+
 /**
  *
  * @author diego
@@ -32,8 +35,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        Vazio = new javax.swing.JPasswordField();
-        jTextField1 = new javax.swing.JTextField();
+        txtSenha = new javax.swing.JPasswordField();
+        txtLogin = new javax.swing.JTextField();
         jToggleButton1 = new javax.swing.JToggleButton();
         jButton1 = new javax.swing.JButton();
 
@@ -50,25 +53,30 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/javafxswingapplication/login.png"))); // NOI18N
 
-        Vazio.setText("jPasswordField1");
-        Vazio.addComponentListener(new java.awt.event.ComponentAdapter() {
+        txtSenha.setText("jPasswordField1");
+        txtSenha.addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
-                VazioComponentShown(evt);
+                txtSenhaComponentShown(evt);
             }
         });
-        Vazio.addActionListener(new java.awt.event.ActionListener() {
+        txtSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                VazioActionPerformed(evt);
+                txtSenhaActionPerformed(evt);
             }
         });
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtLoginActionPerformed(evt);
             }
         });
 
         jToggleButton1.setText("Acessar");
+        jToggleButton1.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jToggleButton1StateChanged(evt);
+            }
+        });
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jToggleButton1ActionPerformed(evt);
@@ -105,8 +113,8 @@ public class NewJFrame extends javax.swing.JFrame {
                             .addComponent(jLabel2))
                         .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField1)
-                            .addComponent(Vazio, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE))
+                            .addComponent(txtLogin)
+                            .addComponent(txtSenha, javax.swing.GroupLayout.DEFAULT_SIZE, 299, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(20, Short.MAX_VALUE))))
@@ -130,11 +138,11 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGap(92, 92, 92)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtLogin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(Vazio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
                 .addComponent(jToggleButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -144,31 +152,46 @@ public class NewJFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    private void txtLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtLoginActionPerformed
+     
+    }//GEN-LAST:event_txtLoginActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-    
-        formularioAgricultor f =  new formularioAgricultor();
+ if((txtLogin.getText().equalsIgnoreCase("diego")) && (txtSenha.getText().equals("140813"))){
+         JOptionPane.showMessageDialog(this, "Login e senha Ok");
+        
+         formularioAgricultor cad=new formularioAgricultor();
+         cad.setVisible(true);
+         
+         formularioAgricultor f =  new formularioAgricultor();
         f.setVisible(true);
+        
+        }else{
+        JOptionPane.showMessageDialog(this, "Login ou  senha incorreta");
+        }  
+ 
+        
     }//GEN-LAST:event_jToggleButton1ActionPerformed
 
-    private void VazioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VazioActionPerformed
+    private void txtSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaActionPerformed
 
-    }//GEN-LAST:event_VazioActionPerformed
+    }//GEN-LAST:event_txtSenhaActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(Vazio.getEchoChar() == '*'){
-            Vazio.setEchoChar((char) 0);
+        if(txtSenha.getEchoChar() == '*'){
+            txtSenha.setEchoChar((char) 0);
         }else{
-            Vazio.setEchoChar('*');
+            txtSenha.setEchoChar('*');
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void VazioComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_VazioComponentShown
+    private void txtSenhaComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_txtSenhaComponentShown
         // TODO add your handling code here:
-    }//GEN-LAST:event_VazioComponentShown
+    }//GEN-LAST:event_txtSenhaComponentShown
+
+    private void jToggleButton1StateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jToggleButton1StateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jToggleButton1StateChanged
 
     /**
      * @param args the command line arguments
@@ -206,14 +229,14 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPasswordField Vazio;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JToggleButton jToggleButton1;
+    private javax.swing.JTextField txtLogin;
+    private javax.swing.JPasswordField txtSenha;
     // End of variables declaration//GEN-END:variables
 }
